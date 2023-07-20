@@ -1,0 +1,9 @@
+@mixin button-purpink {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: linear-gradient($second-color, $primary-color);
+  color: white;
+}
+
+@mixin heart-purpink {}

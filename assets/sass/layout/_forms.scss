@@ -8,16 +8,20 @@
   i {
     position: relative;
     left: 15px;
-    color: #7a7a7a;
+    color: #5e5e5e;
   }
 
   input {
     border: none;
     outline: none;
     background-color: #f3f3f3;
-    color: #7a7a7a;
     font-family: $font-text;
     text-align: center;
     font-size: 15px;
   }
+
+  input::placeholder {
+    color: #5e5e5e;
+  }
+
 }

@@ -9,6 +9,11 @@ body {
   justify-content: center;
 }
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .main-container {
   width: 100%;
   max-width: 768px;
@@ -73,8 +78,34 @@ body {
   font-weight: 300;
 }
 .restaurants-cards .card-content .heart {
+  position: relative;
   font-size: x-large;
   margin-right: 20px;
+}
+.restaurants-cards .card-content .heart svg {
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  font-size: 20px;
+}
+.restaurants-cards .card-content .heart .hearttwo {
+  display: none;
+}
+.restaurants-cards .card-content .heart:hover .hearttwo {
+  display: flex;
+  color: red;
+}
+
+.explore button {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  width: 65%;
+  padding: 15px;
+  position: relative;
+  left: 50px;
 }
 
 header {
@@ -98,16 +129,21 @@ header {
 .form i {
   position: relative;
   left: 15px;
-  color: #7a7a7a;
+  color: #5e5e5e;
 }
 .form input {
   border: none;
   outline: none;
   background-color: #f3f3f3;
-  color: #7a7a7a;
   font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 15px;
+}
+.form input::-moz-placeholder {
+  color: #5e5e5e;
+}
+.form input::placeholder {
+  color: #5e5e5e;
 }
 
 footer {
@@ -160,17 +196,6 @@ footer .footer-links .fa-handshake-angle {
   text-align: center;
   padding-bottom: 20px;
   font-weight: 300;
-}
-.explore button {
-  width: 65%;
-  color: white;
-  padding: 15px;
-  border-radius: 25px;
-  position: relative;
-  left: 50px;
-  border: none;
-  outline: none;
-  background: linear-gradient(#FF79DA, #9356DC);
 }
 
 .fonctionnement {

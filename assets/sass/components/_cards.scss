@@ -60,8 +60,27 @@
     }
 
     .heart {
+      position: relative;
       font-size: x-large;
       margin-right: 20px;
+
+      svg {
+        position: absolute;
+        top: -5px;
+        right: -15px;
+        font-size: 20px;
+      }
+
+      .hearttwo {
+        display: none;
+      }
+
+      &:hover {
+        .hearttwo {
+          display: flex;
+          color: red;
+        }
+      }
     }
   }
 }

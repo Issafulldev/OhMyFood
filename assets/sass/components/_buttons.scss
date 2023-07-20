@@ -1,0 +1,9 @@
+.explore {
+  button {
+    @include button-purpink;
+    width: 65%;
+    padding: 15px;
+    position: relative;
+    left: 50px;
+  }
+}
