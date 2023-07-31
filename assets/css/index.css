@@ -33,7 +33,13 @@ img {
   flex-direction: column;
   background-color: white;
   border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px 1px 7px rgba(0, 0, 0, 0.3));
+  cursor: pointer;
+  transition: transform 800ms;
+}
+.restaurants-cards .card:hover {
+  transform: scale(1.02);
+  filter: drop-shadow(0px 1px 7px #9356DC);
 }
 .restaurants-cards a {
   color: black;
@@ -58,12 +64,13 @@ img {
   background-color: #99E2D0;
   padding: 5px 10px;
   font-size: small;
-  color: #499280;
+  color: #008766;
 }
 .restaurants-cards .card-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 10px 10px 15px;
 }
 .restaurants-cards .card-content .card-txt {
@@ -77,23 +84,24 @@ img {
   font-size: 16px;
   font-weight: 300;
 }
-.restaurants-cards .card-content .heart {
-  position: relative;
-  font-size: x-large;
-  margin-right: 20px;
+.restaurants-cards .card-content .heart .hearttwo {
+  opacity: 0;
 }
 .restaurants-cards .card-content .heart svg {
   position: absolute;
-  top: -5px;
-  right: -15px;
-  font-size: 20px;
-}
-.restaurants-cards .card-content .heart .hearttwo {
-  display: none;
+  right: 5px;
+  top: 12px;
+  font-size: 25px;
+  padding-right: 15px;
 }
 .restaurants-cards .card-content .heart:hover .hearttwo {
-  display: flex;
-  color: red;
+  fill: url(#myGradient);
+  opacity: 1;
+  transition: 0.5s;
+}
+.restaurants-cards .card-content .heart:hover .heartone {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .explore button {
@@ -107,6 +115,12 @@ img {
   position: relative;
   left: 50px;
 }
+.explore button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
 
 header {
   display: flex;
@@ -117,6 +131,15 @@ header {
   width: 100%;
   padding: 15px 0 5px;
   position: relative;
+}
+header a {
+  color: black;
+}
+header .goback {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 25px;
 }
 
 .form {
@@ -156,7 +179,7 @@ footer {
 }
 footer .footer-logo {
   font-family: "Shrikhand", sans-serif;
-  font-size: 8px;
+  font-size: 17px;
   padding-bottom: 15px;
 }
 footer .footer-links {
@@ -208,7 +231,7 @@ footer .footer-links .fa-handshake-angle {
 .fonctionnement h2 {
   padding-bottom: 10px;
 }
-.fonctionnement button {
+.fonctionnement .step {
   width: 95%;
   padding: 20px 10px;
   border-radius: 10px;
@@ -217,10 +240,14 @@ footer .footer-links .fa-handshake-angle {
   align-self: center;
   border: none;
   outline: none;
+  background-color: #fafafa;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   font-size: 15px;
 }
-.fonctionnement button p {
+.fonctionnement .step:hover {
+  background-color: white;
+}
+.fonctionnement .step .num-button {
   position: relative;
   left: -20px;
   background: #9356DC;
@@ -231,7 +258,7 @@ footer .footer-links .fa-handshake-angle {
   outline: none;
   border-radius: 50%;
 }
-.fonctionnement button i {
+.fonctionnement .step i {
   width: 15%;
   position: relative;
   top: -4px;
@@ -240,12 +267,12 @@ footer .footer-links .fa-handshake-angle {
   color: #7e7d7d;
   font-size: large;
 }
-.fonctionnement button .fa-store {
+.fonctionnement .step .fa-store {
   color: #9356DC;
   font-size: medium;
   top: -3px;
 }
-.fonctionnement button h3 {
+.fonctionnement .step .txt-button {
   width: 85%;
   font-size: 15px;
   font-weight: 500;

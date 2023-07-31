@@ -11,7 +11,14 @@
     flex-direction: column;
     background-color: white;
     border-radius: 20px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0px 1px 7px rgba(0, 0, 0, 0.3));
+    cursor: pointer;
+    transition: transform 800ms;
+
+    &:hover {
+      transform: scale(1.02);
+      filter: drop-shadow(0px 1px 7px $primary-color);
+    }
   }
 
   a {
@@ -36,13 +43,14 @@
     background-color: $third-color;
     padding: 5px 10px;
     font-size: small;
-    color: #499280;
+    color: #008766;
   }
 
   .card-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 10px 10px 15px;
 
     .card-txt {
@@ -60,25 +68,29 @@
     }
 
     .heart {
-      position: relative;
-      font-size: x-large;
-      margin-right: 20px;
+
+      .hearttwo {
+        opacity: 0;
+      }
 
       svg {
         position: absolute;
-        top: -5px;
-        right: -15px;
-        font-size: 20px;
-      }
-
-      .hearttwo {
-        display: none;
+        right: 5px;
+        top: 12px;
+        font-size: 25px;
+        padding-right: 15px;
       }
 
       &:hover {
         .hearttwo {
-          display: flex;
-          color: red;
+          fill: url(#myGradient);
+          opacity: 1;
+          transition: 0.5s;
+        }
+
+        .heartone {
+          opacity: 0;
+          transition: 0.5s;
         }
       }
     }

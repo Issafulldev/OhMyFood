@@ -18,12 +18,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 25px 15px;
     font-family: $font-logotitles;
 
-    .fa-heart {
-      font-size: 25px;
-      padding-right: 15px;
+    .heart {
+
+      .hearttwo {
+        opacity: 0;
+      }
+
+      svg {
+        position: absolute;
+        right: 15px;
+        top: 30px;
+        font-size: 25px;
+        padding-right: 15px;
+      }
+
+      &:hover {
+        .hearttwo {
+          fill: url(#myGradient);
+          opacity: 1;
+          transition: 0.5s;
+        }
+
+        .heartone {
+          opacity: 0;
+          transition: 0.5s;
+        }
+      }
     }
   }
 
@@ -38,14 +62,18 @@
       font-weight: 300;
     }
 
-    button {
+    .menu-details {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      align-self: center;
+      position: relative;
+      border-radius: 15px;
       width: 100%;
-      padding: 10px 0;
+      height: 70px;
+      padding: 10px 15px;
       margin-top: 10px;
       background-color: white;
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
     }
 
   }

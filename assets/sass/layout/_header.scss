@@ -7,4 +7,15 @@ header {
   width: 100%;
   padding: 15px 0 5px;
   position: relative;
+
+  a {
+    color: black;
+  }
+
+  .goback {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 25px;
+  }
 }
