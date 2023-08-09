@@ -44,6 +44,11 @@
     padding: 25px 15px;
     font-family: $font-logotitles;
 
+    @media (min-width: 800px) {
+      align-self: center;
+      gap: 70px;
+    }
+
     .heart {
 
       .hearttwo {

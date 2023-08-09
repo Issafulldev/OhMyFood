@@ -218,6 +218,12 @@ footer .footer-links .fa-handshake-angle {
   padding: 25px 15px;
   font-family: "Shrikhand", sans-serif;
 }
+@media (min-width: 800px) {
+  .menu .menu-title {
+    align-self: center;
+    gap: 70px;
+  }
+}
 .menu .menu-title .heart .hearttwo {
   opacity: 0;
 }
