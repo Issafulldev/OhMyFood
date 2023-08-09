@@ -4,6 +4,29 @@
     width: 65%;
     padding: 15px;
     position: relative;
-    left: 50px;
+    left: auto;
+    align-self: center;
+
+    @media (min-width: 800px) {
+      position: relative;
+      left: auto;
+      align-self: center;
+      width: 20%;
+    }
+  }
+}
+
+.menu-order {
+  button {
+    @include button-purpink;
+    width: 50%;
+    padding: 15px;
+
+    @media (min-width: 800px) {
+      position: relative;
+      left: auto;
+      align-self: center;
+      width: 20%;
+    }
   }
 }

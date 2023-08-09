@@ -1,4 +1,5 @@
-header {
+.header-index,
+.header-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,5 +18,11 @@ header {
     left: 20px;
     top: 20px;
     font-size: 25px;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-index {
+    box-shadow: none;
   }
 }

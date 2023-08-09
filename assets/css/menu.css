@@ -19,6 +19,11 @@ img {
   max-width: 768px;
   box-sizing: border-box;
 }
+@media (min-width: 800px) {
+  .main-container {
+    max-width: 1440px;
+  }
+}
 
 .explore button {
   border: none;
@@ -29,7 +34,8 @@ img {
   width: 65%;
   padding: 15px;
   position: relative;
-  left: 50px;
+  left: auto;
+  align-self: center;
 }
 .explore button:hover {
   opacity: 0.8;
@@ -37,8 +43,41 @@ img {
   transition: 0.5s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
+@media (min-width: 800px) {
+  .explore button {
+    position: relative;
+    left: auto;
+    align-self: center;
+    width: 20%;
+  }
+}
 
-header {
+.menu-order button {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  width: 50%;
+  padding: 15px;
+}
+.menu-order button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 800px) {
+  .menu-order button {
+    position: relative;
+    left: auto;
+    align-self: center;
+    width: 20%;
+  }
+}
+
+.header-index,
+.header-menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,28 +87,49 @@ header {
   padding: 15px 0 5px;
   position: relative;
 }
-header a {
+.header-index a,
+.header-menu a {
   color: black;
 }
-header .goback {
+.header-index .goback,
+.header-menu .goback {
   position: absolute;
   left: 20px;
   top: 20px;
   font-size: 25px;
 }
 
+@media (min-width: 800px) {
+  .header-index {
+    box-shadow: none;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 17px 17px;
+  padding: 17px;
   background-color: #353535;
   color: white;
+}
+@media (min-width: 800px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
 }
 footer .footer-logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 17px;
   padding-bottom: 15px;
+}
+@media (min-width: 800px) {
+  footer .footer-logo {
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 40px;
+  }
 }
 footer .footer-links {
   display: flex;
@@ -78,6 +138,25 @@ footer .footer-links {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 300;
+}
+@media (min-width: 800px) {
+  footer .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-top: 50px;
+  }
+  footer .footer-links .icones {
+    display: flex;
+    flex-direction: row;
+    font-weight: 400;
+    gap: 7px;
+  }
+  footer .footer-links .noicones {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 footer .footer-links .fa-utensils {
   position: relative;
@@ -92,10 +171,26 @@ footer .footer-links .fa-handshake-angle {
   font-size: 10px;
 }
 
+.main-menu {
+  background-color: #fafafa;
+}
+@media (min-width: 800px) {
+  .main-menu {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+}
+
 .menu-pic {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+@media (min-width: 800px) {
+  .menu-pic img {
+    height: 350px;
+  }
 }
 
 .menu {
@@ -107,6 +202,13 @@ footer .footer-links .fa-handshake-angle {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   font-family: "Roboto", sans-serif;
+}
+@media (min-width: 800px) {
+  .menu {
+    top: -40px;
+    width: 70%;
+    padding-bottom: 30px;
+  }
 }
 .menu .menu-title {
   display: flex;
@@ -152,9 +254,30 @@ footer .footer-links .fa-handshake-angle {
   position: relative;
   border-radius: 15px;
   width: 100%;
-  height: 70px;
+  height: 60px;
   padding: 10px 15px;
   margin-top: 10px;
   background-color: white;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+.menu .menu-carte .menu-details .menu-details-txt {
+  line-height: 20px;
+}
+.menu .menu-carte .menu-details .menu-details-txt .menu-details-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.menu .menu-carte .menu-details .menu-details-txt .menu-details-subtitle {
+  font-size: 12.5px;
+  font-weight: 300;
+}
+.menu .menu-carte .menu-details .menu-details-price {
+  font-size: 12.5px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+.menu .menu-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=menu.css.map */

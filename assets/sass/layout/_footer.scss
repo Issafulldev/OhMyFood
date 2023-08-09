@@ -2,14 +2,26 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 17px 17px;
+  padding: 17px;
   background-color: #353535;
   color: white;
+
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+  }
 
   .footer-logo {
     font-family: $font-logotitles;
     font-size: 17px;
     padding-bottom: 15px;
+
+    @media (min-width: 800px) {
+      padding-left: 50px;
+      padding-right: 30px;
+      padding-top: 40px;
+    }
   }
 
   .footer-links {
@@ -19,6 +31,26 @@ footer {
     font-family: $font-text;
     font-size: 14px;
     font-weight: 300;
+
+    @media (min-width: 800px) {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      padding-top: 50px;
+
+      .icones {
+        display: flex;
+        flex-direction: row;
+        font-weight: 400;
+        gap: 7px;
+      }
+
+      .noicones {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+      }
+    }
 
     .fa-utensils {
       position: relative;

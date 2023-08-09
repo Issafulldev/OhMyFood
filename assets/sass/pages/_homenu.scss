@@ -1,7 +1,23 @@
+.main-menu {
+  background-color: #fafafa;
+
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+}
+
 .menu-pic {
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @media (min-width: 800px) {
+    img {
+      height: 350px;
+    }
+  }
 }
 
 .menu {
@@ -13,6 +29,12 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   font-family: $font-text;
+
+  @media (min-width: 800px) {
+    top: -40px;
+    width: 70%;
+    padding-bottom: 30px;
+  }
 
   .menu-title {
     display: flex;
@@ -69,13 +91,37 @@
       position: relative;
       border-radius: 15px;
       width: 100%;
-      height: 70px;
+      height: 60px;
       padding: 10px 15px;
       margin-top: 10px;
       background-color: white;
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-    }
 
+      .menu-details-txt {
+        line-height: 20px;
+
+        .menu-details-title {
+          font-size: 15px;
+          font-weight: bold;
+        }
+
+        .menu-details-subtitle {
+          font-size: 12.5px;
+          font-weight: 300;
+        }
+      }
+
+      .menu-details-price {
+        font-size: 12.5px;
+        font-weight: bold;
+        padding-top: 20px;
+      }
+    }
   }
 
+  .menu-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
