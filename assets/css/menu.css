@@ -277,6 +277,13 @@ footer .footer-links .fa-handshake-angle {
   background-color: white;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
+.menu .menu-carte .menu-details:hover .checkicon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  animation: slide-left 0.5s ease;
+  transform-origin: right;
+}
 .menu .menu-carte .menu-details .menu-details-txt {
   line-height: 20px;
 }
@@ -298,14 +305,13 @@ footer .footer-links .fa-handshake-angle {
   transition: 0.5s ease;
 }
 .menu .menu-carte .menu-details .checkicon {
+  display: none;
+  position: absolute;
+  right: 0;
   height: 100%;
   padding: 30px 13px;
   border-radius: 0 15px 15px 0;
   background: #99E2D0;
-}
-.menu .menu-carte .menu-details .checkicon:hover {
-  padding-right: 70px;
-  transition: 0.5s ease;
 }
 .menu .menu-carte .menu-details .checkicon i {
   color: white;

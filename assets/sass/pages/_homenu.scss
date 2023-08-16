@@ -114,6 +114,14 @@
       background-color: white;
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 
+      &:hover .checkicon {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        animation: slide-left 0.5s ease;
+        transform-origin: right;
+      }
+
       .menu-details-txt {
         line-height: 20px;
 
@@ -140,17 +148,13 @@
       }
 
       .checkicon {
-        // display: none;
-        // position: absolute;
+        display: none;
+        position: absolute;
+        right: 0;
         height: 100%;
         padding: 30px 13px;
         border-radius: 0 15px 15px 0;
         background: $third-color;
-
-        &:hover {
-          padding-right: 70px;
-          transition: 0.5s ease;
-        }
 
         i {
           color: white;
