@@ -198,14 +198,14 @@ footer .footer-links .fa-handshake-angle {
   flex-direction: column;
   background-color: #fafafa;
   position: relative;
-  top: -40px;
+  margin-top: -40px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   font-family: "Roboto", sans-serif;
 }
 @media (min-width: 800px) {
   .menu {
-    top: -40px;
+    margin-top: -40px;
     width: 70%;
     padding-bottom: 30px;
   }
@@ -250,8 +250,19 @@ footer .footer-links .fa-handshake-angle {
   padding: 0 10px;
 }
 .menu .menu-carte h2 {
+  position: relative;
   font-size: 15px;
   font-weight: 300;
+}
+.menu .menu-carte h2::after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  left: 0px;
+  bottom: -6px;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
 }
 .menu .menu-carte .menu-details {
   display: flex;
@@ -262,7 +273,7 @@ footer .footer-links .fa-handshake-angle {
   width: 100%;
   height: 60px;
   padding: 10px 15px;
-  margin-top: 10px;
+  margin-top: 20px;
   background-color: white;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
@@ -281,6 +292,24 @@ footer .footer-links .fa-handshake-angle {
   font-size: 12.5px;
   font-weight: bold;
   padding-top: 20px;
+}
+.menu .menu-carte .menu-details .menu-details-price:hover {
+  padding-right: 70px;
+  transition: 0.5s ease;
+}
+.menu .menu-carte .menu-details .checkicon {
+  height: 100%;
+  padding: 30px 13px;
+  border-radius: 0 15px 15px 0;
+  background: #99E2D0;
+}
+.menu .menu-carte .menu-details .checkicon:hover {
+  padding-right: 70px;
+  transition: 0.5s ease;
+}
+.menu .menu-carte .menu-details .checkicon i {
+  color: white;
+  font-size: 25px;
 }
 .menu .menu-order {
   display: flex;
