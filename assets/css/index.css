@@ -106,6 +106,7 @@ img {
   top: 12px;
   font-size: 25px;
   padding-right: 15px;
+  transition: 0.5s;
 }
 .restaurants-cards .card-content .heart:hover .hearttwo {
   fill: url(#myGradient);
@@ -123,6 +124,8 @@ img {
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
   width: 65%;
   padding: 15px;
   position: relative;
@@ -131,7 +134,6 @@ img {
 }
 .explore button:hover {
   opacity: 0.8;
-  cursor: pointer;
   transition: 0.5s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -150,12 +152,13 @@ img {
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
   width: 50%;
   padding: 15px;
 }
 .menu-order button:hover {
   opacity: 0.8;
-  cursor: pointer;
   transition: 0.5s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -288,6 +291,60 @@ footer .footer-links .fa-handshake-angle {
   top: -2px;
   padding-right: 4px;
   font-size: 10px;
+}
+
+.loader {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8549019608);
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  animation: spinner 2s linear;
+  visibility: hidden;
+}
+.loader__border {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border: 10px solid transparent;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: spinner-border 2s linear;
+  z-index: 10;
+  visibility: hidden;
+}
+.loader__center {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #99E2D0;
+}
+@keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .explore {

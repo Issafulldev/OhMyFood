@@ -31,6 +31,8 @@ img {
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
   width: 65%;
   padding: 15px;
   position: relative;
@@ -39,7 +41,6 @@ img {
 }
 .explore button:hover {
   opacity: 0.8;
-  cursor: pointer;
   transition: 0.5s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -58,12 +59,13 @@ img {
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
+  cursor: pointer;
+  transition-duration: 0.5s;
   width: 50%;
   padding: 15px;
 }
 .menu-order button:hover {
   opacity: 0.8;
-  cursor: pointer;
   transition: 0.5s;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
@@ -198,13 +200,14 @@ footer .footer-links .fa-handshake-angle {
   flex-direction: column;
   background-color: #fafafa;
   position: relative;
-  margin-top: -40px;
+  top: -40px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   font-family: "Roboto", sans-serif;
 }
 @media (min-width: 800px) {
   .menu {
+    top: 0;
     margin-top: -40px;
     width: 70%;
     padding-bottom: 30px;
@@ -233,6 +236,7 @@ footer .footer-links .fa-handshake-angle {
   top: 30px;
   font-size: 25px;
   padding-right: 15px;
+  transition: 0.5s;
 }
 .menu .menu-title .heart:hover .hearttwo {
   fill: url(#myGradient);
@@ -269,6 +273,8 @@ footer .footer-links .fa-handshake-angle {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
   border-radius: 15px;
   width: 100%;
   height: 60px;
@@ -277,15 +283,15 @@ footer .footer-links .fa-handshake-angle {
   background-color: white;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
-.menu .menu-carte .menu-details:hover .checkicon {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  animation: slide-left 0.5s ease;
-  transform-origin: right;
-}
 .menu .menu-carte .menu-details .menu-details-txt {
   line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu .menu-carte .menu-details .menu-details-txt p {
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .menu-carte .menu-details .menu-details-txt .menu-details-title {
   font-size: 15px;
@@ -296,18 +302,17 @@ footer .footer-links .fa-handshake-angle {
   font-weight: 300;
 }
 .menu .menu-carte .menu-details .menu-details-price {
+  display: flex;
   font-size: 12.5px;
   font-weight: bold;
   padding-top: 20px;
-}
-.menu .menu-carte .menu-details .menu-details-price:hover {
-  padding-right: 70px;
-  transition: 0.5s ease;
+  transition: 0.5s;
 }
 .menu .menu-carte .menu-details .checkicon {
   display: none;
   position: absolute;
-  right: 0;
+  right: -60px;
+  width: 60px;
   height: 100%;
   padding: 30px 13px;
   border-radius: 0 15px 15px 0;
@@ -316,6 +321,20 @@ footer .footer-links .fa-handshake-angle {
 .menu .menu-carte .menu-details .checkicon i {
   color: white;
   font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu .menu-carte .menu-details:hover .menu-details-price {
+  padding-right: 70px;
+  transition: 0.5s ease;
+}
+.menu .menu-carte .menu-details:hover .checkicon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  transform: translateX(-60px);
+  transition: transform 0.5s ease;
 }
 .menu .menu-order {
   display: flex;
