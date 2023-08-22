@@ -295,7 +295,7 @@ footer .footer-links .fa-handshake-angle {
 
 .loader {
   height: 100%;
-  background: rgba(255, 255, 255, 0.8549019608);
+  background-color: white;
   margin: auto;
   position: fixed;
   top: 0;
