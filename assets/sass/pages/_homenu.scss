@@ -194,4 +194,26 @@
     justify-content: center;
     align-items: center;
   }
+
+  .menu-entree {
+    animation: appear 1s ease-in-out;
+  }
+
+  .menu-plats {
+    animation: appear 2s ease-in-out;
+  }
+
+  .menu-desserts {
+    animation: appear 2.5s ease-in-out;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }
