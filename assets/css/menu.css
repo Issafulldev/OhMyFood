@@ -121,6 +121,11 @@ footer {
     padding: 20px;
   }
 }
+footer a {
+  color: white;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
 footer .footer-logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 17px;

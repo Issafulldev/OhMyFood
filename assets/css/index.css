@@ -52,7 +52,7 @@ img {
 }
 .restaurants-cards .card:hover {
   transform: scale(1.02);
-  filter: drop-shadow(0px 1px 7px #9356DC);
+  filter: drop-shadow(0px 1px 7px rgba(0, 0, 0, 0.3));
 }
 .restaurants-cards a {
   color: black;
@@ -241,6 +241,11 @@ footer {
     padding: 20px;
   }
 }
+footer a {
+  color: white;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+}
 footer .footer-logo {
   font-family: "Shrikhand", sans-serif;
   font-size: 17px;
@@ -295,7 +300,7 @@ footer .footer-links .fa-handshake-angle {
 
 .loader {
   height: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.568);
   margin: auto;
   position: fixed;
   top: 0;
@@ -331,6 +336,16 @@ footer .footer-links .fa-handshake-angle {
   height: 15px;
   border-radius: 50%;
   background-color: #99E2D0;
+}
+@keyframes spinner {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 @keyframes spinner-border {
   0% {
@@ -405,9 +420,6 @@ footer .footer-links .fa-handshake-angle {
   background-color: #fafafa;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   font-size: 15px;
-}
-.fonctionnement .step:hover {
-  background-color: white;
 }
 .fonctionnement .step .num-button {
   position: relative;

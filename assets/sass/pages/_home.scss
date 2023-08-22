@@ -1,6 +1,6 @@
 .loader {
   height: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.568);
   margin: auto;
   position: fixed;
   top: 0;
@@ -38,6 +38,18 @@
     border-radius: 50%;
     background-color: $third-color;
 
+  }
+
+  @keyframes spinner {
+    from {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   @keyframes spinner-border {
@@ -118,10 +130,6 @@
     background-color: #fafafa;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
     font-size: 15px;
-
-    &:hover {
-      background-color: white;
-    }
 
     .num-button {
       position: relative;
