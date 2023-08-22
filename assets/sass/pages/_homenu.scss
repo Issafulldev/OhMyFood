@@ -149,7 +149,11 @@
       }
 
       .checkicon {
-        display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(60px);
+        transition: transform 0.5s ease;
         position: absolute;
         right: -60px;
         width: 60px;
@@ -174,13 +178,12 @@
         }
 
         .checkicon {
+          visibility: visible;
           display: flex;
           justify-content: center;
           align-self: center;
           transform: translateX(-60px);
           transition: transform 0.5s ease;
-          // animation: slide-left 0.5s ease;
-          // transform-origin: right;
         }
       }
     }

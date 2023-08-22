@@ -309,7 +309,11 @@ footer .footer-links .fa-handshake-angle {
   transition: 0.5s;
 }
 .menu .menu-carte .menu-details .checkicon {
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(60px);
+  transition: transform 0.5s ease;
   position: absolute;
   right: -60px;
   width: 60px;
@@ -330,6 +334,7 @@ footer .footer-links .fa-handshake-angle {
   transition: 0.5s ease;
 }
 .menu .menu-carte .menu-details:hover .checkicon {
+  visibility: visible;
   display: flex;
   justify-content: center;
   align-self: center;
